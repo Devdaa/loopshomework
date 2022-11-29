@@ -28,12 +28,18 @@ const arr4 = [2, 7, 4, 9, 6, 1, 6, 3];
 // Log true if an array is special, and false otherwise.
 
 function exe3(){
+    let count=0;
     for(let i=0; i<arr4.length; i++){
         if(i%2==0 && arr4[i]%2==0){
-            console.log(true);
+            count++;
         }else if(i%2==1 && arr4[i]%2==1){
-            console.log(true);
-        } // აქ შემეძლო ასეთი რამის დაწერა? if( (i%2==0 %% arr4[i]%2==0) || (i%2==1 && arr4[i]%2==1) ){ console.log(true);}
+            count++;
+        }
+    }
+    if(count==arr4.length){
+        console.log(true);
+    }else{
+        console.log(false);
     }
 }
 
